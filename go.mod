@@ -1,6 +1,6 @@
 module bblwasm
 
-go 1.20
+go 1.24.13
 
 replace github.com/charmbracelet/bubbletea => ./_vendor/bubbletea
 
