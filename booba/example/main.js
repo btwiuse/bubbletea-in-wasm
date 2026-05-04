@@ -19,7 +19,7 @@ function waitForBridge() {
 }
 
 function initTerminal() {
-  const term = new Terminal({ cursorBlink: true });
+  const term = new Terminal({ convertEol: true, cursorBlink: true });
   const fitAddon = new FitAddon.FitAddon();
   term.loadAddon(fitAddon);
   term.open(document.getElementById("terminal-container"));

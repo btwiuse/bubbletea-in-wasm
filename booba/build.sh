@@ -24,6 +24,7 @@ EXAMPLE_DIR="$SCRIPT_DIR/example"
 # ---------------------------------------------------------------------------
 BOOBA_VERSION="$(go list -m -f '{{.Version}}' github.com/NimbleMarkets/go-booba 2>/dev/null || echo "latest")"
 echo "==> Installing booba-wasm-build@${BOOBA_VERSION} ..."
+command -v booba-wasm-build || \
 go install "github.com/NimbleMarkets/go-booba/cmd/booba-wasm-build@${BOOBA_VERSION}"
 
 # ---------------------------------------------------------------------------
